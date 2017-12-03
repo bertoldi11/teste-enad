@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Sistema de Classificação do ENAD - Teste';
 ?>
 <div class="site-index">
 
