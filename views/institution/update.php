@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Institution */
 
-$this->title = 'Update Institution: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Institutions', 'url' => ['index']];
+$this->title = 'Alterar dados: ' . $model->name;
+$this->params['breadcrumbs'][] = ['label' => 'Instituições', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->idinstitution]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Alterar';
 ?>
 <div class="institution-update">
 

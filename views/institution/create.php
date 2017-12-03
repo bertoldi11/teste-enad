@@ -6,8 +6,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Institution */
 
-$this->title = 'Create Institution';
-$this->params['breadcrumbs'][] = ['label' => 'Institutions', 'url' => ['index']];
+$this->title = 'Cadastrar nova Instituição';
+$this->params['breadcrumbs'][] = ['label' => 'Instituições', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="institution-create">

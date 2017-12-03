@@ -41,9 +41,9 @@ class Institution extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idinstitution' => 'Idinstitution',
-            'name' => 'Name',
-            'grade' => 'Grade',
+            'idinstitution' => 'Cod. Instituição',
+            'name' => 'Nome',
+            'grade' => 'Nota',
         ];
     }
 

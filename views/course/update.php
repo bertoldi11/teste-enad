@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model app\models\Course */
 
 $this->title = 'Update Course: ' . $model->idcourse;
-$this->params['breadcrumbs'][] = ['label' => 'Courses', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Cursos', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->idcourse, 'url' => ['view', 'id' => $model->idcourse]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Alterar';
 ?>
 <div class="course-update">
 

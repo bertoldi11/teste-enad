@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $idcourse
  * @property integer $idinstitution
+ * @property string $name
  * @property double $coursegrade
  * @property double $studentgrade
  *
@@ -30,7 +31,7 @@ class Course extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['idinstitution', 'coursegrade', 'studentgrade'], 'required'],
+            [['idinstitution','name', 'coursegrade', 'studentgrade'], 'required'],
             [['idinstitution'], 'integer'],
             [['coursegrade', 'studentgrade'], 'number'],
             [['idinstitution'], 'exist', 'skipOnError' => true, 'targetClass' => Institution::className(), 'targetAttribute' => ['idinstitution' => 'idinstitution']],
@@ -43,10 +44,11 @@ class Course extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'idcourse' => 'Idcourse',
-            'idinstitution' => 'Idinstitution',
-            'coursegrade' => 'Coursegrade',
-            'studentgrade' => 'Studentgrade',
+            'idcourse' => 'Cod. Curso',
+            'idinstitution' => 'Instituição',
+            'name'=>'Nome',
+            'coursegrade' => 'Nota do Curso',
+            'studentgrade' => 'Nota média dos alunos',
         ];
     }
 
