@@ -1,4 +1,5 @@
 <?php
+use yii\grid\GridView;
 
 /* @var $this yii\web\View */
 
@@ -14,7 +15,22 @@ $this->title = 'Sistema de Classificação do ENAD - Teste';
 
     <div class="body-content">
 
-
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'columns' => [
+            [
+                'label'=>'Instituição',
+                'value'=>'idinstitution0.name'
+            ],
+            [
+                'label'=>'Nota da Instituição',
+                'value'=>'idinstitution0.grade'
+            ],
+            'name:text:Nome do Curso',
+            'coursegrade',
+            'studentgrade',
+        ],
+    ]); ?>
 
     </div>
 </div>

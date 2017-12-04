@@ -2,7 +2,9 @@
 
 namespace app\controllers;
 
+use app\models\Course;
 use Yii;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -61,7 +63,12 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $dataProvider = new ActiveDataProvider([
+            'query' => Course::find(),
+        ]);
+        return $this->render('index', [
+            'dataProvider'=> $dataProvider
+        ]);
     }
 
     /**
