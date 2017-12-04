@@ -63,8 +63,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
         $dataProvider = new ActiveDataProvider([
-            'query' => Course::find(),
+            'query' => Course::find()->innerJoinWith('idinstitution0')->orderBy('institution.grade desc'),
         ]);
         return $this->render('index', [
             'dataProvider'=> $dataProvider
