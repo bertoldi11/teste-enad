@@ -1,5 +1,6 @@
 <?php
 use yii\grid\GridView;
+use yii\widgets\LinkPager;
 
 /* @var $this yii\web\View */
 
@@ -29,8 +30,10 @@ $this->title = 'Sistema de Classificação do ENAD - Teste';
             'name:text:Nome do Curso',
             'coursegrade',
             'studentgrade',
-        ],
+        ]
     ]); ?>
+
+
 
     </div>
 </div>

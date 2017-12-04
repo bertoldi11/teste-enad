@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\models\Course;
 use Yii;
 use yii\data\ActiveDataProvider;
+use yii\data\Pagination;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
@@ -63,9 +64,17 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $query = Course::find()->innerJoinWith('idinstitution0')->orderBy('institution.grade desc ');
+        $pagination = new Pagination(['totalCount' => $query->count()]);
+        $pagination->setPageSize(5);
+
+        $query->offset($pagination->offset)->limit($pagination->limit);
 
         $dataProvider = new ActiveDataProvider([
-            'query' => Course::find()->innerJoinWith('idinstitution0')->orderBy('institution.grade desc'),
+            'query' => $query,
+            'pagination' => [
+                'pageSize' => 5,
+            ]
         ]);
         return $this->render('index', [
             'dataProvider'=> $dataProvider
