@@ -5,6 +5,7 @@ use yii\helpers\Html;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Course */
+/* @var $institutions [app\models\Institution] */
 
 $this->title = 'Cadastrar novo Curso';
 $this->params['breadcrumbs'][] = ['label' => 'Cursos', 'url' => ['index']];
@@ -16,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
+        'institutions'=>$institutions
     ]) ?>
 
 </div>

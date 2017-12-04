@@ -2,17 +2,19 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\Course */
 /* @var $form yii\widgets\ActiveForm */
+/* @var $institutions [app\models\Institution] */
 ?>
 
 <div class="course-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'idinstitution')->textInput() ?>
+    <?= $form->field($model, 'idinstitution')->dropDownList( ArrayHelper::map($institutions, 'idinstitution', 'name')) ?>
 
     <?= $form->field($model, 'name')->textInput() ?>
 

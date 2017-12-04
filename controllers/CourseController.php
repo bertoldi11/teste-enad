@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Institution;
 use Yii;
 use app\models\Course;
 use yii\data\ActiveDataProvider;
@@ -70,6 +71,7 @@ class CourseController extends Controller
         } else {
             return $this->render('create', [
                 'model' => $model,
+                'institutions'=> Institution::find()->all()
             ]);
         }
     }
@@ -89,6 +91,7 @@ class CourseController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'institutions'=> Institution::find()->all()
             ]);
         }
     }
