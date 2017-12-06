@@ -1,0 +1,11 @@
+<?php
+/**
+ * Configurações de ambiente
+ */
+
+$dataBase =  array (
+    'host'=>'192.168.56.3',
+    'dataBase'=>'teste-enad',
+    'user'=>'root',
+    'password'=>'123456'
+);

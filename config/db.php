@@ -1,10 +1,11 @@
 <?php
+require 'local_settings.php';
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=192.168.56.3;dbname=teste-enad',
-    'username' => 'root',
-    'password' => '123456',
+    'dsn' => 'mysql:host=' . $dataBase['host'] . ';dbname=' . $dataBase['dataBase'],
+    'username' => $dataBase['user'],
+    'password' => $dataBase['password'],
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
