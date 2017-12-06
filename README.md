@@ -1,14 +1,11 @@
-This project is a teste for a Software Engineer.
-
+This project is a test for a position as Software Engineer. :)
 Powered by  [Yii Framework](http://www.yiiframework.com/).
 
 REQUIREMENTS
 ------------
 
 [PHP 5.6.x or 7.x](https://php.net)
-
 [Composer](https://getcomposer.org)
-
 [Mysql 5.5.*](https://www.mysql.com/)
 
 
@@ -17,9 +14,7 @@ CONFIGURATION
 
 ### Database
 
-Copy and rename the local_settings.php.example to local_settings.php
-
-
+Copy and rename the file config/local_settings.php.example to config/local_settings.php
 Insert your database access credential.
 
 ```php
@@ -33,7 +28,7 @@ $dataBase =  array (
 
 ### Dependencies
 
-Run the command bellow to install the dependencies on a application directory root:
+Run the command bellow, on application directory root, to install the dependencies :
 ```Bash
 composer install
 ```
@@ -41,9 +36,9 @@ composer install
 RUN APPLICATION
 ---------------
 
-If you are in a development or test enviroment, should run in the application directory root:
+If you are in a development or test environment, should run in the application directory root the follow command:
 ```Bash
 php yii [ip:port]
 ```
 
-If you are in a production environment, should use a webserver like [Apache](https://www.apache.org/) ou [NGINX](https://nginx.org/en/).
+If you are in a production environment, should use a webserver like [Apache](https://www.apache.org/) or [NGINX](https://nginx.org/en/).
