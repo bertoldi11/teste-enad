@@ -65,10 +65,16 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $textToSearch = Yii::$app->request->get('query');
-        $query = Course::find()->innerJoinWith('idinstitution0')->orderBy('institution.grade desc ');
+        $query = Course::find()->innerJoinWith('idinstitution0')->orderBy('institution.grade desc, course.coursegrade desc ');
 
         if(!empty($textToSearch)) {
             $query->where(['like', 'course.name', $textToSearch])->orWhere(['like', 'institution.name', $textToSearch]);
+            if((float)$textToSearch > 0 ){
+                $query
+                    ->where(['course.coursegrade' => $textToSearch])
+                    ->orWhere(['course.studentgrade' => $textToSearch])
+                    ->orWhere(['course.grade' => $textToSearch]);
+            }
         }
 
         $pagination = new Pagination(['totalCount' => $query->count()]);
