@@ -1,11 +1,14 @@
 This project is a test for a position as Software Engineer. :)
+
 Powered by  [Yii Framework](http://www.yiiframework.com/).
 
 REQUIREMENTS
 ------------
 
 [PHP 5.6.x or 7.x](https://php.net)
+
 [Composer](https://getcomposer.org)
+
 [Mysql 5.5.*](https://www.mysql.com/)
 
 
@@ -15,6 +18,7 @@ CONFIGURATION
 ### Database
 
 Copy and rename the file config/local_settings.php.example to config/local_settings.php
+
 Insert your database access credential.
 
 ```php
