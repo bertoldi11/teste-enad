@@ -69,11 +69,14 @@ class SiteController extends Controller
 
         if(!empty($textToSearch)) {
             $query->where(['like', 'course.name', $textToSearch])->orWhere(['like', 'institution.name', $textToSearch]);
+            /**
+             * Just need to search mais grades, if the query is a float.
+             */
             if((float)$textToSearch > 0 ){
                 $query
                     ->where(['course.coursegrade' => $textToSearch])
                     ->orWhere(['course.studentgrade' => $textToSearch])
-                    ->orWhere(['course.grade' => $textToSearch]);
+                    ->orWhere(['institution.grade' => $textToSearch]);
             }
         }
 
