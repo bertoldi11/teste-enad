@@ -16,9 +16,6 @@ if (getenv('host')) {
     require 'local_settings.php';
 }
 
-print_r($dataBase);
-die();
-
 return [
     'class' => 'yii\db\Connection',
     'dsn' => 'mysql:host=' . $dataBase['host'] . ';dbname=' . $dataBase['dataBase'],
