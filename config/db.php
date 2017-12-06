@@ -1,5 +1,15 @@
 <?php
-require 'local_settings.php';
+
+if (getenv('host')) {
+    $dataBase = array(
+        'host'=>getenv('host'),
+        'dataBase'=>getenv('dataBase'),
+        'user'=>getenv('user'),
+        'password'=>getenv('password'),
+    );
+} else {
+    require 'local_settings.php';
+}
 
 return [
     'class' => 'yii\db\Connection',
