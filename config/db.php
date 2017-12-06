@@ -1,4 +1,9 @@
 <?php
+/**
+ * If application in Heroku, then try to connect using the env vars
+ * Else use a file name local_settings.php.
+ * This file has a example in local_setting.php.example
+ */
 
 if (getenv('host')) {
     $dataBase = array(
