@@ -30,6 +30,8 @@ $dataBase =  array (
 );
 ```
 
+You need to create the database. The file database/mysql_schema.sql has the DDL.
+
 ### Dependencies
 
 Run the command bellow, on application directory root, to install the dependencies :
